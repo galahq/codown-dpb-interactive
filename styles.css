@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+}
+
+.header {
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline;
+}
+
+.columns {
+  display: flex;
+  min-height:50vh;
+  padding: 1rem 0;
+}
+
+.column {
+  flex: 1;
+  min-width: 0;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.column h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.radio-group {
+  margin-bottom: 1.2rem;
+}
+
+.radio-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.radio-group label {
+  display: inline-block;
+  margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+.radio-group input {
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.radio-group-container {
+  width: 100%;
+  height:140px;
+}
+
+.dbp-area {
+  flex: 1;
+  min-height: 100px;
+  max-height: 360px;
+  width: 100%;
+  position: relative;
+  margin-top: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 6px;
+  border: 1px solid #e5e5e5;
+}
+
+.divider {
+  width: 1px;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+.btn-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #888;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.btn-more:hover {
+  background: #666;
+}
+
+.footer {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.legend h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend-shape {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-thm {
+  background: #c4a77d;
+}
+
+.legend-haa {
+  background: #7db8d4;
+}
+
+.legend-han {
+  background: #e8d48b;
+}
+
+.legend-others {
+  background: #b85c4a;
+}
+
+.dbp-shape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dbp-shape.thm {
+  background: #c4a77d;
+}
+
+.dbp-shape.haa {
+  background: #7db8d4;
+}
+
+.dbp-shape.han {
+  background: #e8d48b;
+}
+
+.dbp-shape.others {
+  background: #b85c4a;
+}

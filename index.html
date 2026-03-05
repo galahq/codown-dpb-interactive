@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBP Interactive Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1>DBP Formation</h1>
+  </header>
+
+  <main class="columns">
+    <section class="column" id="source-water">
+      <h2>Source Water</h2>
+      <div class="radio-group-container">
+        <div class="radio-group">
+          <span class="radio-label">Organic Matter</span>
+          <label><input type="radio" name="organic" value="low"> Low</label>
+          <label><input type="radio" name="organic" value="medium" checked> Medium</label>
+          <label><input type="radio" name="organic" value="high"> High</label>
+        </div>
+        <div class="radio-group">
+          <span class="radio-label">Additional elements</span>
+          <label><input type="radio" name="additional" value="bromine" checked> Bromine</label>
+          <label><input type="radio" name="additional" value="fluorine"> Fluorine</label>
+          <label><input type="radio" name="additional" value="iodine"> Iodine</label>
+          <label><input type="radio" name="additional" value="nitrogen"> Nitrogen</label>
+        </div>
+      </div>
+      <div class="dbp-area" id="dbp-source" aria-label="DBPs at source water stage"></div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="column" id="treatment">
+      <h2>Treatment</h2>
+      <div class="radio-group-container">
+        <div class="radio-group">
+          <span class="radio-label">Primary Disinfectant</span>
+          <label><input type="radio" name="primary" value="chlorine" checked> Free Chlorine</label>
+          <label><input type="radio" name="primary" value="chloramine"> Chloramine</label>
+          <label><input type="radio" name="primary" value="other"> Other</label>
+        </div>
+      </div>
+      <div class="dbp-area" id="dbp-treatment" aria-label="DBPs at treatment stage"></div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="column" id="distribution">
+      <h2>Distribution</h2>
+      <div class="radio-group-container">
+        <div class="radio-group">
+          <span class="radio-label">Residual Disinfectant</span>
+          <label><input type="radio" name="residual" value="chlorine"> Free Chlorine</label>
+          <label><input type="radio" name="residual" value="chloramine" checked> Chloramine</label>
+        </div>
+        <div class="radio-group">
+          <span class="radio-label">Travel Time (to tap)</span>
+          <label><input type="radio" name="travel" value="low"> Low</label>
+          <label><input type="radio" name="travel" value="medium"> Medium</label>
+          <label><input type="radio" name="travel" value="high" checked> High</label>
+        </div>
+      </div>
+      <div class="dbp-area" id="dbp-distribution" aria-label="DBPs at distribution stage"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="legend">
+      <h3>DBP Legend</h3>
+      <div class="legend-items">
+        <span class="legend-item"><span class="legend-shape legend-thm"></span> Trihalomethanes (THMs)</span>
+        <span class="legend-item"><span class="legend-shape legend-haa"></span> Haloacetic Acids (HAAs)</span>
+        <span class="legend-item"><span class="legend-shape legend-han"></span> Haloacetonitriles (HANs)</span>
+        <span class="legend-item"><span class="legend-shape legend-others"></span> Others</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
