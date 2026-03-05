@@ -1,6 +1,8 @@
 # DBP Interactive Tool
 
-A simple educational web app that shows how different water treatment choices affect the formation of **Disinfection Byproducts (DBPs)** at each stage of the process. Students select options in three categories—Source Water, Treatment, and Distribution—and see the number and mix of DBPs update in real time.
+**[This is a draft of the tool for feedback]**
+
+A simple educational example showing how different water treatment choices affect the formation of **Disinfection Byproducts (DBPs)** at each stage of the process. Students select options in three categories—Source Water, Treatment, and Distribution—and see the number and mix of DBPs update in real time.
 
 ## How to run
 
