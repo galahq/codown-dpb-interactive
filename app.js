@@ -101,16 +101,30 @@
     });
   }
 
-  function update() {
+  // Which stages need re-render when a given input name changes (downstream dependency)
+  const inputToStages = {
+    organic: ['source', 'treatment', 'distribution'],
+    additional: ['source', 'treatment', 'distribution'],
+    primary: ['treatment', 'distribution'],
+    residual: ['distribution'],
+    travel: ['distribution'],
+  };
+
+  function update(affectedStages) {
     const selections = getSelections();
     const counts = computeCounts(selections);
-    renderColumn('dbp-source', counts.source);
-    renderColumn('dbp-treatment', counts.treatment);
-    renderColumn('dbp-distribution', counts.distribution);
+    const stages = affectedStages || ['source', 'treatment', 'distribution'];
+    const containerMap = { source: 'dbp-source', treatment: 'dbp-treatment', distribution: 'dbp-distribution' };
+    stages.forEach(function (stage) {
+      renderColumn(containerMap[stage], counts[stage]);
+    });
   }
 
   document.querySelectorAll('input[type="radio"]').forEach(function (radio) {
-    radio.addEventListener('change', update);
+    radio.addEventListener('change', function () {
+      const stages = inputToStages[radio.name] || ['source', 'treatment', 'distribution'];
+      update(stages);
+    });
   });
 
   update();
